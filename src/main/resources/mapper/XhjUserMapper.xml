@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cxkj.manufacturing.dao.XhjUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.cxkj.manufacturing.entity.XhjUser">
+        <id column="id" property="id" />
+        <result column="ylzd4" property="ylzd4" />
+        <result column="unit" property="unit" />
+        <result column="ylzd1" property="ylzd1" />
+        <result column="ylzd2" property="ylzd2" />
+        <result column="department" property="department" />
+        <result column="ylzd5" property="ylzd5" />
+        <result column="realname" property="realname" />
+        <result column="password" property="password" />
+        <result column="ylzd3" property="ylzd3" />
+        <result column="remark" property="remark" />
+        <result column="ylzd6" property="ylzd6" />
+        <result column="username" property="username" />
+        <result column="phone" property="phone" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        ylzd4, unit, ylzd1, ylzd2, department, ylzd5, realname, password, ylzd3, id, remark, ylzd6, username, phone
+    </sql>
+    <select id="selecta" resultType="com.cxkj.manufacturing.entity.XhjUser">
+        select
+        <include refid="Base_Column_List"></include>
+        from xhj_user
+    </select>
+
+</mapper>

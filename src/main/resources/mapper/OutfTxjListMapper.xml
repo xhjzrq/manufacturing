@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cxkj.manufacturing.dao.OutfTxjListMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.cxkj.manufacturing.entity.OutfTxjList">
+<!--        <result column="Project" property="project" />-->
+<!--        <result column="module" property="module" />-->
+<!--        <result column="DrawingNo" property="drawingNo" />-->
+<!--        <result column="DrawingName" property="drawingName" />-->
+<!--        <result column="ZZJID" property="zzjid" />-->
+<!--        <result column="ZZJBH" property="zzjbh" />-->
+<!--        <result column="ZZJMC" property="zzjmc" />-->
+<!--        <result column="ZZJXH" property="zzjxh" />-->
+<!--        <result column="ZZJGG" property="zzjgg" />-->
+<!--        <result column="ZZJCZ" property="zzjcz" />-->
+<!--        <result column="quantity" property="quantity" />-->
+<!--        <result column="Weight" property="wight" />-->
+<!--        <result column="Unit" property="unit" />-->
+<!--        <result column="PaintArea" property="paintArea" />-->
+<!--        <result column="PaintCode" property="paintCode" />-->
+<!--        <result column="DEPT" property="dept" />-->
+<!--        <result column="Users" property="users" />-->
+<!--        <result column="CreateDate" property="createDate" />-->
+<!--        <result column="ModifyDate" property="modifyDate" />-->
+<!--        <result column="ModifyTimes" property="modifyTimes" />-->
+<!--        <result column="Memo" property="memo" />-->
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        Project, module, DrawingNo, DrawingName, ZZJID, ZZJBH, ZZJMC, ZZJXH, ZZJGG, ZZJCZ, quantity, Weight, Unit, PaintArea, PaintCode, DEPT, Users, CreateDate, ModifyDate, ModifyTimes, Memo
+    </sql>
+    <select id="selectAll" resultType="com.cxkj.manufacturing.entity.OutfTxjList" >
+       select
+        <include refid="Base_Column_List" />
+        from tribon.OUTF_TXJ_LIST
+    </select>
+
+</mapper>

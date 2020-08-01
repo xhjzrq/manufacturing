@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cxkj.manufacturing.dao.OutfTxjMtrlMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.cxkj.manufacturing.entity.OutfTxjMtrl">
+        <result column="Project" property="Project" />
+        <result column="DrawingNo" property="DrawingNo" />
+        <result column="ZZJBH" property="zzjbh" />
+        <result column="compID" property="compID" />
+        <result column="compDH" property="compDH" />
+        <result column="compMC" property="compMC" />
+        <result column="compCZ" property="compCZ" />
+        <result column="compWeight" property="compWeight" />
+        <result column="compCount" property="compCount" />
+        <result column="area" property="area" />
+        <result column="Page" property="Page" />
+        <result column="Users" property="Users" />
+        <result column="Memo" property="Memo" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        Project, DrawingNo, ZZJBH, compID, compDH, compMC, compCZ, compWeight, compCount, area, Page, Users, Memo
+    </sql>
+
+</mapper>

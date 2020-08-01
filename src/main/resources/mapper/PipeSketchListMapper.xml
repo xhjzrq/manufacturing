@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cxkj.manufacturing.dao.PipeSketchListMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.cxkj.manufacturing.entity.PipeSketchList">
+        <result column="Project" property="Project" />
+        <result column="TribonModule" property="TribonModule" />
+        <result column="SketchName" property="SketchName" />
+        <result column="PipeNo" property="PipeNo" />
+        <result column="DrawingNo" property="DrawingNo" />
+        <result column="InTreatment" property="InTreatment" />
+        <result column="OutTreatment" property="OutTreatment" />
+        <result column="InPaintCode" property="InPaintCode" />
+        <result column="OutPaintCode" property="OutPaintCode" />
+        <result column="InArea" property="InArea" />
+        <result column="OutArea" property="OutArea" />
+        <result column="Pressure" property="Pressure" />
+        <result column="PipeWeight" property="PipeWeight" />
+        <result column="Page" property="Page" />
+        <result column="Users" property="Users" />
+        <result column="CreateDate" property="CreateDate" />
+        <result column="ModifyDate" property="ModifyDate" />
+        <result column="ModifyTimes" property="ModifyTimes" />
+        <result column="Status" property="Status" />
+        <result column="Memo" property="Memo" />
+        <result column="PipeLineCode" property="PipeLineCode" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        Project, TribonModule, SketchName, PipeNo, DrawingNo, InTreatment, OutTreatment, InPaintCode, OutPaintCode, InArea, OutArea, Pressure, PipeWeight, Page, Users, CreateDate, ModifyDate, ModifyTimes, Status, Memo, PipeLineCode
+    </sql>
+
+</mapper>

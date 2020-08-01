@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cxkj.manufacturing.dao.PipeSketchJgMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.cxkj.manufacturing.entity.PipeSketchJg">
+        <result column="SketchName" property="SketchName" />
+        <result column="DrawingNo" property="DrawingNo" />
+        <result column="Project" property="Project" />
+        <result column="TribonModule" property="TribonModule" />
+        <result column="PipeNo" property="PipeNo" />
+        <result column="JGXH" property="jgxh" />
+        <result column="JGFlag" property="JGFlag" />
+        <result column="StartBend" property="StartBend" />
+        <result column="StraightPipe" property="StraightPipe" />
+        <result column="PipeLine" property="PipeLine" />
+        <result column="ZJBend" property="ZJBend" />
+        <result column="QJTurn" property="QJTurn" />
+        <result column="Inclination" property="Inclination" />
+        <result column="GLExcess" property="GLExcess" />
+        <result column="Radius" property="Radius" />
+        <result column="PreTurn" property="PreTurn" />
+        <result column="AccConnection" property="AccConnection" />
+        <result column="BraClosedLen" property="BraClosedLen" />
+        <result column="BraInclineWay" property="BraInclineWay" />
+        <result column="BraTurnAngle" property="BraTurnAngle" />
+        <result column="BraXDistance" property="BraXDistance" />
+        <result column="Memo" property="Memo" />
+        <result column="InitialAngle" property="InitialAngle" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        SketchName, DrawingNo, Project, TribonModule, PipeNo, JGXH, JGFlag, StartBend, StraightPipe, PipeLine, ZJBend, QJTurn, Inclination, GLExcess, Radius, PreTurn, AccConnection, BraClosedLen, BraInclineWay, BraTurnAngle, BraXDistance, Memo, InitialAngle
+    </sql>
+
+</mapper>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cxkj.manufacturing.dao.PipeSketchMtrlMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.cxkj.manufacturing.entity.PipeSketchMtrl">
+        <result column="SketchName" property="SketchName" />
+        <result column="DrawingNo" property="DrawingNo" />
+        <result column="Project" property="Project" />
+        <result column="TribonModule" property="TribonModule" />
+        <result column="PipeNo" property="PipeNo" />
+        <result column="MtrlPos" property="MtrlPos" />
+        <result column="MtrlFlag" property="MtrlFlag" />
+        <result column="MtrlName" property="MtrlName" />
+        <result column="MtrlGG" property="MtrlGG" />
+        <result column="MtrlXHCZ" property="MtrlXHCZ" />
+        <result column="MtrlQuantity" property="MtrlQuantity" />
+        <result column="MtrlUnit" property="MtrlUnit" />
+        <result column="MtrlBuildLength" property="MtrlBuildLength" />
+        <result column="MtrlWeight" property="MtrlWeight" />
+        <result column="Memo" property="Memo" />
+        <result column="MtrlGGXHCZ" property="MtrlGGXHCZ" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        SketchName, DrawingNo, Project, TribonModule, PipeNo, MtrlPos, MtrlFlag, MtrlName, MtrlGG, MtrlXHCZ, MtrlQuantity, MtrlUnit, MtrlBuildLength, MtrlWeight, Memo, MtrlGGXHCZ
+    </sql>
+
+</mapper>
