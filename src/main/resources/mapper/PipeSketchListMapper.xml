@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.cxkj.manufacturing.dao.PipeSketchListMapper">
+<mapper namespace="com.rpkj.manufacturing.dao.PipeSketchListMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.cxkj.manufacturing.entity.PipeSketchList">
+    <resultMap id="BaseResultMap" type="com.rpkj.manufacturing.entity.PipeSketchList">
         <result column="Project" property="Project" />
         <result column="TribonModule" property="TribonModule" />
         <result column="SketchName" property="SketchName" />
@@ -31,5 +31,17 @@
     <sql id="Base_Column_List">
         Project, TribonModule, SketchName, PipeNo, DrawingNo, InTreatment, OutTreatment, InPaintCode, OutPaintCode, InArea, OutArea, Pressure, PipeWeight, Page, Users, CreateDate, ModifyDate, ModifyTimes, Status, Memo, PipeLineCode
     </sql>
+    <select id="getList" resultType="java.util.Map">
+        select distinct  drawingno from tribon.Pipe_Sketch_List
+        where isnull(drawingno,'') &lt;&gt; ''
+        <if test="project!=null and project !='' " >
+            and  ltrim(rtrim(project))=#{project}
+        </if>
+        <if test ="drawingNo!=null and  drawingNo !='' ">
+
+            and    ltrim(rtrim(drawingNo))like '%${drawingNo}%'
+        </if>
+
+    </select>
 
 </mapper>

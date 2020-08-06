@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.cxkj.manufacturing.dao.PipeSketchMtrlMapper">
+<mapper namespace="com.rpkj.manufacturing.dao.PipeSketchMtrlMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.cxkj.manufacturing.entity.PipeSketchMtrl">
+    <resultMap id="BaseResultMap" type="com.rpkj.manufacturing.entity.PipeSketchMtrl">
         <result column="SketchName" property="SketchName" />
         <result column="DrawingNo" property="DrawingNo" />
         <result column="Project" property="Project" />
