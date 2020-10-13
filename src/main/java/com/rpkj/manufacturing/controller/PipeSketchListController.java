@@ -29,7 +29,7 @@ import java.util.Map;
  * @since 2020-07-29
  */
 @RestController
-    @RequestMapping("/pipeSketchList")
+    @RequestMapping("/api/pipeSketchList")
 @CrossOrigin
 public class PipeSketchListController {
     @Autowired
@@ -102,11 +102,21 @@ public class PipeSketchListController {
         excelWriter.write(list2, writeSheet);
         //千万别忘记finish 会帮忙关闭流
         excelWriter.finish();
-
-        
-
     }
 
+
+    @GetMapping("/getListDist")
+    public R getListDist(){
+
+        PipeSketchList pipeSketchList=new PipeSketchList();
+        List<Map<String,String>> list =pipeSketchListService.getDist();
+        if (list.size()==0){
+            return R.error().data("msg","未查询到数据");
+        }
+        pipeSketchList.setProject("工程编号");
+        pipeSketchList.setPipeSketchLists(list);
+        return R.ok().data("list",pipeSketchList);
+    }
 
 
 }

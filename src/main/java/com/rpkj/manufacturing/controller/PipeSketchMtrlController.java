@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2020-07-30
  */
 @RestController
-@RequestMapping("/pipeSketchMtrl")
+@RequestMapping("/api/pipeSketchMtrl")
 public class PipeSketchMtrlController {
 
 }

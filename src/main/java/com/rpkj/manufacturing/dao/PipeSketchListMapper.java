@@ -21,5 +21,8 @@ public interface PipeSketchListMapper extends BaseMapper<PipeSketchList> {
     //@Select("select distinct  drawingno from tribon.Pipe_Sketch_List where Project =#{project} and isnull(drawingno,'')<> ''")
      List<Map<String,String>>  getList(@Param("project") String project,@Param("drawingNo")String drawingNo);
 
+    @Select("select distinct  project from tribon.Pipe_Sketch_List where isnull(project,'')<> ''")
+    List<Map<String,String>> getDist();
+
 
 }

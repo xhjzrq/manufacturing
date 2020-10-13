@@ -7,11 +7,12 @@ import com.rpkj.manufacturing.util.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api/user")
 @CrossOrigin
 public class UserController {
     @Autowired
@@ -26,9 +27,16 @@ public class UserController {
     }
 
     @GetMapping("info")
-    public R info() {
+    public R info(String token) {
        // return R.ok().data("roles", "admin").data("name", "admin").data("avatar", "admin");
-        return R.ok();
+        ArrayList<String> roles = new ArrayList<String>();
+
+        if ("admin".equals(token)){
+            roles.add("admin");
+        }else{
+            roles.add("test");
+        }
+        return R.ok().data("roles",roles).data("avatar","https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif").data("name","Super Admin");
 
     }
 

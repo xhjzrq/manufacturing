@@ -16,4 +16,5 @@ import java.util.Map;
  */
 public interface PipeSketchListService extends IService<PipeSketchList> {
     List<Map<String,String>> getList(String project,String drawingNo);
+    List<Map<String,String>> getDist();
 }

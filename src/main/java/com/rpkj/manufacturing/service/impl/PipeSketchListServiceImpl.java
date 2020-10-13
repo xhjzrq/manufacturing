@@ -28,4 +28,9 @@ public class PipeSketchListServiceImpl extends ServiceImpl<PipeSketchListMapper,
     public List<Map<String, String>> getList(String project,String drawingNo) {
         return pipeSketchListMapper.getList(project, drawingNo);
     }
+
+    @Override
+    public List<Map<String, String>> getDist() {
+        return pipeSketchListMapper.getDist();
+    }
 }

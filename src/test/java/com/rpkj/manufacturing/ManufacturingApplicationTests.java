@@ -20,7 +20,7 @@ private PipeSketchListMapper pipeSketchListMapper;
     @Test
     void contextLoads() {
         //List<OutfTxjList> outfTxjLists = outfTxjListMapper.selectAll("T308K-5", null);
-        List<Map<String, String>> list = pipeSketchListMapper.getList("c10k-1", null);
+        List<Map<String, String>> list = pipeSketchListMapper.getDist();
         System.out.println(list.size());
 
 

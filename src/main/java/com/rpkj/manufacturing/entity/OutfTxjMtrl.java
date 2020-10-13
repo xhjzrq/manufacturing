@@ -33,7 +33,7 @@ public class OutfTxjMtrl  {
 
     @TableField("ZZJBH")
     private String zzjbh;
-
+    @ExcelIgnore
     @TableField("compID")
     private String compID;
 

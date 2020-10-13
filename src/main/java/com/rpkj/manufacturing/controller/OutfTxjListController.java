@@ -30,7 +30,7 @@ import java.util.Map;
  * @since 2020-07-31
  */
 @RestController
-@RequestMapping("/outfTxjList")
+@RequestMapping("/api/outfTxjList")
 @CrossOrigin
 public class OutfTxjListController {
     @Autowired

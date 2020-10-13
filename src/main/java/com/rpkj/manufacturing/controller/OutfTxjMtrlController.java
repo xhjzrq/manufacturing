@@ -14,7 +14,7 @@ import org.springframework.stereotype.Controller;
  * @since 2020-07-31
  */
 @Controller
-@RequestMapping("/outfTxjMtrl")
+@RequestMapping("/api/outfTxjMtrl")
 public class OutfTxjMtrlController {
 
 }

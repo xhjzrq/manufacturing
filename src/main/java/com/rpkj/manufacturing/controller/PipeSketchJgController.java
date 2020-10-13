@@ -14,7 +14,7 @@ import org.springframework.stereotype.Controller;
  * @since 2020-07-30
  */
 @Controller
-@RequestMapping("/pipeSketchJg")
+@RequestMapping("/api/pipeSketchJg")
 public class PipeSketchJgController {
 
 }

@@ -55,7 +55,7 @@
         </if>
         <if test ="drawingNo!=null and  drawingNo !='' ">
 
-            and    ltrim(rtrim(drawingNo))like '%${drawingNo}%'
+            and ltrim(rtrim(drawingNo))like '%${drawingNo}%'
         </if>
     </select>
 
