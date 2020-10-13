@@ -1,0 +1,25 @@
+D:\downloads\chromeDownloads\sqlserver2000qd
+mvn install:install-file -Dfile=D:\downloads\chromeDownloads\sqlserver2000qd\msutil.jar
+-DgroupId=com.xhj  -DartifactId=msutil -Dversion=1.0.0 -Dpackaging=jar
+
+mvn install:install-file -Dfile=D:\downloads\chromeDownloads\sqlserver2000qd\msbase.jar
+-DgroupId=com.xhj  -DartifactId=msbase -Dversion=1.0.0 -Dpackaging=jar
+
+
+mvn install:install-file -Dfile=D:\downloads\chromeDownloads\sqlserver2000qd\mssqlserver.jar
+-DgroupId=com.xhj  -DartifactId=mssqlserver -Dversion=1.0.0 -Dpackaging=jar
+
+
+
+mvn install:install-file -Dfile=D:\downloads\chromeDownloads\sqlserver2000qd\sqljdbc.jar
+-DgroupId=com.xhj  -DartifactId=sqljdbc -Dversion=3.0.0 -Dpackaging=jar
+
+mvn install:install-file -Dfile=D:\downloads\chromeDownloads\sqlserver2000qd\sqljdbc4.jar
+-DgroupId=com.xhj  -DartifactId=sqljdbc4 -Dversion=3.0.0 -Dpackaging=jar
+
+
+mvn install:install-file -Dfile=D:\downloads\chromeDownloads\sqljdbc4-3.0.jar
+-DgroupId=com.microsoft  -DartifactId=resqljdbc4 -Dversion=3.0 -Dpackaging=jar
+
+mvn install:install-file -Dfile=D:\downloads\chromeDownloads\jtds-1.3.1-dist\jtds-1.3.1.jar
+-DgroupId=com.xhj  -DartifactId=jtds -Dversion=1.3.1 -Dpackaging=jar
