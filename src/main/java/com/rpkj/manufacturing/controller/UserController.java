@@ -1,6 +1,7 @@
 package com.rpkj.manufacturing.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.rpkj.manufacturing.entity.UserFilterVO;
 import com.rpkj.manufacturing.entity.XhjUser;
 import com.rpkj.manufacturing.service.XhjUserService;
 import com.rpkj.manufacturing.util.R;
@@ -56,7 +57,28 @@ public class UserController {
             qw.ne("id","1");
         }
         List<XhjUser> userList= xhjUserService.list(qw);
-        return R.ok().data("list",userList);
+
+
+        List<XhjUser> listo =xhjUserService.list(new QueryWrapper<XhjUser>().select("distinct username"));
+        List<UserFilterVO> userlisto = new ArrayList<>();
+        UserFilterVO userFilterVO;
+        for(XhjUser x: listo){
+            userFilterVO=new UserFilterVO();
+            userFilterVO.setText(x.getUsername());
+            userFilterVO.setValue(x.getUsername());
+            userlisto.add(userFilterVO);
+        }
+
+//        List<XhjUser> listo1 =xhjUserService.list(new QueryWrapper<XhjUser>().select("distinct username"));
+//        List<UserFilterVO> userlisto1 = new ArrayList<>();
+//        UserFilterVO userFilterVO1;
+//        for(XhjUser x: listo){
+//            userFilterVO=new UserFilterVO();
+//            userFilterVO.setText(x.getUsername());
+//            userFilterVO.setValue(x.getUsername());
+//            userlisto.add(userFilterVO);
+//        }
+        return R.ok().data("list",userList).data("userfilter",userlisto);
     }
 
     @GetMapping("del")

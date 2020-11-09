@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rpkj.manufacturing.dao.DyMxMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.rpkj.manufacturing.entity.DyMx">
+        <result column="czbh" property="czbh" />
+        <result column="kh" property="kh" />
+        <result column="zzth" property="zzth" />
+        <result column="azqy" property="azqy" />
+        <result column="bjxh" property="bjxh" />
+        <result column="bjdh" property="bjdh" />
+        <result column="bjmc" property="bjmc" />
+        <result column="bjgg" property="bjgg" />
+        <result column="TH" property="th" />
+        <result column="bjcz" property="bjcz" />
+        <result column="jldw" property="jldw" />
+        <result column="zzsl" property="zzsl" />
+        <result column="bjzl" property="bjzl" />
+        <result column="fjsl" property="fjsl" />
+        <result column="cplx" property="cplx" />
+        <result column="gcbm" property="gcbm" />
+        <result column="gcmc" property="gcmc" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        czbh, kh, zzth, azqy, bjxh, bjdh, bjmc, bjgg, TH, bjcz, jldw, zzsl, bjzl, fjsl, cplx, gcbm, gcmc
+    </sql>
+    <select id="selectAll" resultType="com.rpkj.manufacturing.entity.DyMx">
+        select
+        <include refid="Base_Column_List" />
+        from tribon.DY_MX
+        <where>
+            <if test="czbh!=null">
+                and  ltrim(rtrim(czbh))=#{czbh}
+            </if>
+            <if test ="zzth!=null">
+                and   ltrim(rtrim(zzth))=#{zzth}
+            </if>
+        </where>
+
+
+    </select>
+</mapper>

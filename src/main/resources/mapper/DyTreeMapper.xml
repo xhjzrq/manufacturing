@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rpkj.manufacturing.dao.DyTreeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.rpkj.manufacturing.entity.DyTree">
+        <result column="czbh" property="czbh" />
+        <result column="dymc" property="dymc" />
+        <result column="azth" property="azth" />
+        <result column="zzth" property="zzth" />
+        <result column="tzlx" property="tzlx" />
+        <result column="azqy" property="azqy" />
+        <result column="tpmc" property="tpmc" />
+        <result column="ph" property="ph" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        czbh, dymc, azth, zzth, tzlx, azqy, tpmc
+    </sql>
+    <select id="getList" resultType="java.util.Map">
+        select distinct  left(ph,4) +dymc as  dymc from tribon.dy_tree
+        where isnull(czbh,'') &lt;&gt; ''
+        <if test="czbh!=null and czbh !='' " >
+            and ltrim(rtrim(czbh))=#{czbh}
+        </if>
+        <if test ="dymc!=null and  dymc !='' ">
+
+            and ltrim(rtrim(dymc))like '%${dymc}%'
+        </if>
+
+    </select>
+
+    <select id="getListMc" resultType="java.util.Map">
+        select distinct  zzth +'-'+tzlx as  czbh from tribon.dy_tree
+        where isnull(czbh,'') &lt;&gt; ''
+        <if test="czbh!=null and czbh !='' " >
+            and ltrim(rtrim(czbh))=#{czbh}
+        </if>
+        <if test ="dymc!=null and  dymc !='' ">
+
+            and ltrim(rtrim(dymc))like '%${dymc}%'
+        </if>
+
+            order by czbh
+    </select>
+
+</mapper>

@@ -20,6 +20,7 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("tribon.xhj_user")
+//@TableName("xhj_user")
 //extends Model<XhjUser>
 public class XhjUser  {
 
