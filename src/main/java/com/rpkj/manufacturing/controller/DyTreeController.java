@@ -13,9 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * <p>
@@ -42,7 +40,27 @@ public class DyTreeController {
         for(Map<String,String> list : mapList){
             String rdymc= list.get("dymc");
              dyTreeVO= new DyTreeVO();
-            List<Map<String, String>> listMc = dyTreeService.getListMc(czbh, rdymc.substring(4,rdymc.length()));
+            List<Map<String, String>> listMc = dyTreeService.getListMc(czbh, rdymc.substring(0,4));
+            List<Map<String, String>> listMc1=new ArrayList<>();
+//            for (int i=0;i<listMc.size();i++){
+//                String temp=listMc.get(i).get(czbh);
+//                if ("安装图"==temp.substring(temp.length()-3,temp.length())){
+//
+//                }
+//            }
+            Collections.sort(listMc, new Comparator<Map<String, String>>() {
+                @Override
+                public int compare(Map<String, String> o1, Map<String, String> o2) {
+                    String  aaa=o1.get("czbh").substring(o1.get("czbh").length()-3,o1.get("czbh").length());
+                    if (aaa.equals("安装图")){
+                        System.out.println("123456");
+                        return -1;
+                    }else{
+                        return 1;
+                    }
+
+                }
+            });
             dyTreeVO.setCzbh(rdymc);
             dyTreeVO.setTreelist(listMc);
             dyTreeVOList.add(dyTreeVO);

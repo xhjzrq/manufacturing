@@ -19,15 +19,16 @@
         czbh, dymc, azth, zzth, tzlx, azqy, tpmc
     </sql>
     <select id="getList" resultType="java.util.Map">
-        select distinct  left(ph,4) +dymc as  dymc from tribon.dy_tree
+        select distinct  azqy +' '+dymc as  dymc from tribon.dy_tree
         where isnull(czbh,'') &lt;&gt; ''
         <if test="czbh!=null and czbh !='' " >
             and ltrim(rtrim(czbh))=#{czbh}
         </if>
         <if test ="dymc!=null and  dymc !='' ">
 
-            and ltrim(rtrim(dymc))like '%${dymc}%'
+            and ltrim(rtrim(azqy))like '%${dymc}%'
         </if>
+
 
     </select>
 
@@ -39,7 +40,7 @@
         </if>
         <if test ="dymc!=null and  dymc !='' ">
 
-            and ltrim(rtrim(dymc))like '%${dymc}%'
+            and ltrim(rtrim(azqy))like '%${dymc}%'
         </if>
 
             order by czbh

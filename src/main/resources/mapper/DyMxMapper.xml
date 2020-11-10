@@ -21,11 +21,13 @@
         <result column="cplx" property="cplx" />
         <result column="gcbm" property="gcbm" />
         <result column="gcmc" property="gcmc" />
+        <result column="xt" property="xt" />
+        <result column="bjlc" property="bjlc" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        czbh, kh, zzth, azqy, bjxh, bjdh, bjmc, bjgg, TH, bjcz, jldw, zzsl, bjzl, fjsl, cplx, gcbm, gcmc
+        czbh, kh, zzth, azqy, bjxh, bjdh, bjmc, bjgg, TH, bjcz, jldw, zzsl, bjzl, fjsl, cplx, gcbm, gcmc,xt,bjlc
     </sql>
     <select id="selectAll" resultType="com.rpkj.manufacturing.entity.DyMx">
         select
